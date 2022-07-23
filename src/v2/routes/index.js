@@ -1,3 +1,4 @@
+console.log("app-iniziata");
 const express = require("express");
 const router = express.Router();
 
