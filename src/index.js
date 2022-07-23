@@ -1,3 +1,4 @@
+console.log("ciaociao")
 const express = require("express");
 const bodyParser = require("body-parser");
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
