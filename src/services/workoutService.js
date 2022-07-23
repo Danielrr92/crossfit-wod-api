@@ -15,8 +15,8 @@ const createNewWorkout = (newWorkout) => {
   const workoutToInsert = {
     ...newWorkout,
     id: uuid(),
-    createdAt: new Date().toLocaleString(),
-    updatedAt: new Date().toLocaleString(),
+    createdAt: new Date().toLocaleString("it-IT"),
+    updatedAt: new Date().toLocaleString("it-IT"),
   };
   const createdWorkout = Workout.createNewWorkout(workoutToInsert);
   return createdWorkout;

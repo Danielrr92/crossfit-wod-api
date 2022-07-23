@@ -34,7 +34,7 @@ const updateOneWorkout = (workoutId, changes) => {
   const updatedWorkout = {
     ...DB.workouts[indexForUpdate],
     ...changes,
-    updatedAt: new Date().toLocaleString(),
+    updatedAt: new Date().toLocaleString("it-IT"),
   };
   DB.workouts[indexForUpdate] = updatedWorkout;
   saveToDatabase(DB);
