@@ -7,8 +7,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use("/", v1WorkoutRouter);
 app.use("/api/v1/workouts", v1WorkoutRouter);
+
+app.all('/', function(req, res) {
+    res.redirect('/api/v1/workouts/');
+});
 
 app.listen(PORT, () => {
     console.log(`API is listening on port ${PORT}`);
